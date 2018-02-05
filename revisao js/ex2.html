@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+
+
+            <script type="text/javascript">
+            // ex2: consultar o meu vetor de listaDeCompras e, se encontrar um item que seja do tipo fruta,
+            //       adicionar o item em um outro vetor chamado frutas e dar um console.log no vetor frutas
+
+
+            let  listaDeCompras = [
+                  {
+                      nome: 'banana',
+                      tipo: 'fruta'
+                  },
+                  {
+                      nome: 'coca cola',
+                      tipo: 'refrigerante'
+                  },
+                  {
+                      nome: 'morango',
+                      tipo: 'fruta'
+                  },
+                  {
+                      nome: 'maça',
+                      tipo: 'fruta'
+                  },
+                  {
+                      nome: 'panela',
+                      tipo: 'louça'
+                  },
+                  {
+                      nome: 'uva',
+                      tipo: 'fruta'
+                  },
+                  {
+                      nome: 'guarana',
+                      tipo: 'refrigerante'
+                  }
+              ];
+
+              let frutas = [];
+
+              for(let item of listaDeCompras){
+
+                    if(item.tipo == 'fruta'){ // compara se o item possui o tipo fruta, e se possuir, executa o codigo
+                                            // que esta dentro do if
+
+                        frutas.push(item);  //ele esta copiando as informacoes do item, e adicionando elas em uma posicao do meu vetor de frutas
+                        console.log(item);
+                    }
+
+              }
+
+              console.log('O meu vetor de frutas é: ');
+              console.log(frutas);
+
+
+
+
+
+
+            </script>
+    </body>
+</html>

@@ -1,0 +1,52 @@
+
+
+    img{
+        width: 50%;
+
+    }
+
+    .linha{
+        width: 100%;
+        display: flex; /* DISPLAY FLEX FORÇA TODOS OS ELEMENTOS A FICAREM NA MESMA LINHA, NEM QUE ISSO RESULTE EM DISTORCER SUAS PROPORCCOES */
+    }
+
+    .quadrado{
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+    }
+
+    .vermelho{
+        background-color: red;
+    }
+
+    .azul{
+        background-color: blue;
+    }
+
+    .amarelo{
+        background-color: yellow;
+    }
+
+@media (max-width: 600px){ /* PARA TELAS COM, NO MAXIMO, 600px, OS ELEMENTOS INCORPORAM AS SEGUINTES PROPRIEDADES: */
+
+    div{
+        width: 100%;
+    }
+
+    img{
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 400px){ /* PARA TELAS COM, NO MAXIMO, 400px, OS ELEMENTOS INCORPORAM AS SEGUINTES PROPRIEDADES: */
+    .linha{
+        display: block;
+    }
+
+    .vermelho{
+        background-color: green;
+    }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <title></title>
+    </head>
+    <body>
+
+        <header class="container">
+            <div class="row">
+                <div class="col-4 offset-4">
+                    <input type="text" class="form-control" placeholder="Digite um animal" id="input1">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-4 offset-4">
+                    <button class="btn btn-primary btn-block" onclick="adicionarAnimal()">Adicionar</button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-4 offset-4">
+                    <button class="btn btn-danger btn-block" onclick="removerAnimal()">Remover</button>
+                </div>
+            </div>
+        </header>
+
+
+
+
+
+        <script type="text/javascript">
+
+        // ex 4: seu programa deve permitir que o usuario insira dados em um vetor de
+        // animais e que ele tambem remova itens inseridos nesse vetor
+
+
+        let animais = [];
+
+        let adicionarAnimal = () =>{
+
+            let input = document.querySelector('#input1'); //buscando no html meu elemento que tem o id input1
+
+            console.log(input);
+
+            animais.push(input.value);
+
+            console.log(animais);
+
+        }
+
+        let removerAnimal = () =>{
+            animais.pop(); //remove o ultimo item do nosso vetor animais
+            console.log(animais);
+        }
+
+
+        </script>
+    </body>
+</html>

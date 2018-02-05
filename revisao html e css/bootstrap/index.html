@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- PARA SEU SITE SER RESPONSIVE, VOCE DEVE DECLARAR A TAG ACIMA, QUE É A META VIEWPORT -->
+
+        <title></title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <!-- NAO ESQUECA DE REFERENCIAR O BOOTSTRAP TAMBEM -->
+
+    </head>
+    <body>
+        <style media="screen">
+            .coluna{
+                border: 1px solid black;
+            }
+
+            img{
+                width: 100%;
+            }
+        </style>
+
+
+        <!-- PARA USAR O SISTEMA DE GRIDS DO BOOTSTRAP, É NECESSARIO USAR A CLASS 'container' EM UMA DIV QUE IRA CONTER AS LINHAS E COLUNAS -->
+        <div class="container"> <!-- A CLASSE 'container' TEM POR PADRA UM PADDING LATERAL DEFINIDO-->
+            <div class="row">
+                <div class="coluna col-md-1"> col-1 </div> <!-- A CLASSE COLUNA FOI CRIADA NO NOSSO PROPRIO STYLE, PARA COLCOAR BORDA NAS COLUNAS-->
+                <div class="coluna col-md-1"> col-1 </div>  <!-- A CLASSE col-md-1 INDICA QUE AS COLUNAS TERAO ESSE COMPORTAMENTO ATE CHEGAREM NO TAMANHO MD DO BOOTSTRAP -->
+                <div class="coluna col-md-1"> col-1 </div>  <!-- A PARTIR DESSE TAMANHO, ELAS SERAO EMPILHADAS -->
+                <div class="coluna col-md-1"> col-1 </div>
+                <div class="coluna col-md-1"> col-1 </div>
+                <div class="coluna col-md-1"> col-1 </div>
+                <div class="coluna col-md-1"> col-1 </div>
+                <div class="coluna col-md-1"> col-1 </div>
+                <div class="coluna col-md-1"> col-1 </div>
+                <div class="coluna col-md-1"> col-1 </div>
+                <div class="coluna col-md-1"> col-1 </div>
+                <div class="coluna col-md-1"> col-1 </div>
+            </div>
+
+            <!-- AQUI ESTA SENDO CRIADA UMA NOVA LINHA, LEMBRANDO QUE CADA LINHA PODE TER NO MAXIMO 12 COLUNAS -->
+
+            <div class="row">
+                <div class="coluna col-sm-1"> col-1 </div>  <!-- A CLASSE col-sm-1 INDICA QUE AS COLUNAS TERAO ESSE COMPORTAMENTO ATE CHEGAREM NO TAMANHO MD DO BOOTSTRAP -->
+                <div class="coluna col-sm-1"> col-1 </div>  <!-- A PARTIR DESSE TAMANHO, ELAS SERAO EMPILHADAS -->
+                <div class="coluna col-sm-1"> col-1 </div>
+                <div class="coluna col-sm-1"> col-1 </div>
+                <div class="coluna col-sm-1"> col-1 </div>
+                <div class="coluna col-sm-1"> col-1 </div>
+                <div class="coluna col-sm-1"> col-1 </div>
+                <div class="coluna col-sm-1"> col-1 </div>
+                <div class="coluna col-sm-1"> col-1 </div>
+                <div class="coluna col-sm-1"> col-1 </div>
+                <div class="coluna col-sm-1"> col-1 </div>
+                <div class="coluna col-sm-1"> col-1 </div>
+
+            </div>
+        </div>
+
+        <div class="container-fluid"> <!-- PARA QUE SEU CONTAINER OCUPE 100% DA TELA, SEM O PADDING, É NECESSÁRIO DECLARAR A CLASSE 'container-fluid'-->
+            <div class="row">
+                <div class="coluna col-1"> col-1 </div> <!-- A CLASSE col-1, POR NAO TER TAMANHO INDICADO, MANTEM AS COLUNAS ALINHADAS SEM EMPILHAR, INDEPENDENTEMENTE DO TAMANHO DA TELA -->
+                <div class="coluna col-1"> col-1 </div>
+                <div class="coluna col-1"> col-1 </div>
+                <div class="coluna col-1"> col-1 </div>
+                <div class="coluna col-1"> col-1 </div>
+                <div class="coluna col-1"> col-1 </div>
+                <div class="coluna col-1"> col-1 </div>
+                <div class="coluna col-1"> col-1 </div>
+                <div class="coluna col-1"> col-1 </div>
+                <div class="coluna col-1"> col-1 </div>
+                <div class="coluna col-1"> col-1 </div>
+                <div class="coluna col-1"> col-1 </div>
+
+            </div>
+        </div>
+
+
+
+        <div class="container">
+            <div class="row">
+                <div class="coluna col-sm-1"> col-1 </div>
+                <div class="coluna col-sm-1"> col-1 </div>
+                <div class="coluna col-sm-1"> col-1 </div>
+                <div class="coluna col-sm-1"> col-1 </div>
+                <div class="coluna col-sm-1"> col-1 </div>
+                <div class="coluna col-sm-1"> col-1 </div>
+                <div class="coluna col-sm-1"> col-1 </div>
+                <div class="coluna col-sm-1"> col-1 </div>
+                <div class="coluna col-sm-1"> col-1 </div>
+                <div class="coluna col-sm-1"> col-1 </div>
+                <div class="coluna col-sm-1"> col-1 </div>
+                <div class="coluna col-sm-1"> col-1 </div>
+
+            </div>
+
+            <div class="row">
+                <div class="coluna col-md-4"> col-4 </div>
+                <div class="coluna col-md-4"> col-4 </div>
+                <div class="coluna col-md-4"> col-4 </div>
+            </div>
+
+            <div class="row">
+                <div class="coluna col-md-8  col-sm-6">     <!-- NESSE CASO, ATE ATINGIR O TAMANHO md, ESSA COLUNA IRA OCUPAR 8 ESPACOS DE COLUNA -->
+                    col-md-8 col-sm-6                       <!-- POREM, QUANDO CHEGAR NO TAMANHO sm, ELA OCUPARA O TAMANHO DE 6 COLUNAS, E ABAIXO DE sm, EMPILHARA-->
+                    <img src="http://tudosobrecachorros.com.br/wp-content/uploads/cachorro-independente.jpg" alt="">
+                </div>
+                <div class="coluna col-md-4 col-sm-6"> col-md-4 col-sm-6 a descricao do meu cachorro </div>  <!-- NESSE CASO, ATE ATINGIR O TAMANHO md, ESSA COLUNA IRA OCUPAR 4 ESPACOS DE COLUNA -->
+            </div>                                                                                              <!-- POREM, QUANDO CHEGAR NO TAMANHO sm, ELA OCUPARA O TAMANHO DE 6 COLUNAS, E ABAIXO DE sm, EMPILHARA-->
+        </div>
+
+
+        <div class="container">
+            <div class="row">
+
+                <div class="coluna col-sm-4 offset-md-8">col-4 offset-8</div> <!-- A CLASSE offset-md-8 INDICA QUE A COLUNA COMECARA A PARTIR DO OITAVO ESPACO E, QUANDO CHEGAR NO TAMANHO md, ELA VOLTA PARA O PRIMEIRO ESPACO DE COLUNA-->
+
+            </div>
+
+        </div>
+
+
+
+    </body>
+</html>

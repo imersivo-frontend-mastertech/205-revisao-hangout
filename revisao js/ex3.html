@@ -1,0 +1,141 @@
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+
+        <title>Exemplo Carrossel</title>
+    </head>
+    <body>
+        <style media="screen">
+                .div-botoes{
+                    margin-top: 20px;
+                }
+
+                input{
+                    margin-top: 50px;
+                    margin-bottom: 10px;
+                }
+
+               img{
+                   width: 100%;
+               }
+
+        </style>
+
+        <nav class="navbar navbar-light bg-light">
+          <span class="navbar-brand mb-0 h1">Exemplo Carrossel</span>
+        </nav>
+
+
+        <header class="container">
+            <div class="row">
+                <div class="col-8 offset-md-2">
+                    <img src="">
+                </div>
+            </div>
+            <div class="row div-botoes">
+                <div class="col-4 offset-md-2">
+                    <button type="button" onclick="voltar()" class="btn btn-primary btn-lg btn-block">Voltar</button>
+                </div>
+                <div class="col-4">
+                    <button type="button" onclick="avancar()" class="btn btn-primary btn-lg btn-block">Avançar</button>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-8 offset-md-2">
+                    <input type="text" class="form-control" placeholder="Novo endereco de imagem">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-8 offset-md-2">
+                    <button type="button" onclick="adicionarImagem()" class="btn btn-primary btn-lg btn-block">Adicionar</button>
+                </div>
+            </div>
+
+        </header>
+
+
+
+
+
+
+        <script type="text/javascript">
+
+                // ex3:  fazer um carrossel em que o usuario pode inserir atraves de um input novas imagens
+
+                let midias = [
+                    'http://tudosobrecachorros.com.br/wp-content/uploads/2013/09/nomes-para-cachorros.jpeg',
+                    'http://tudosobrecachorros.com.br/wp-content/uploads/precos-de-cachorro.png',
+                    'http://portaldodog.com.br/cachorros/wp-content/uploads/2015/07/american-staffordshire-terrier-400x210.jpg',
+                    'http://portaldodog.com.br/cachorros/wp-content/uploads/2015/04/basset-hound-400x210.jpg'
+
+                ];  // esse é o nosso vetor que contem os enderecos das imagens que serao usadas no carrossel
+
+
+                let imagem = document.querySelector('img'); //armazendo na variavel imagem a tag img do html
+
+                let posicao = 0; // criando variavel de apoio para percorrer o vetor de midias
+
+                imagem.src = midias[posicao];  //endereco corresponde a posicao 0 do meu vetor de midias
+
+
+                let avancar = () =>{ // a funcao avancar é chamada quando clicamos no botao avancar
+
+
+
+                    posicao = posicao + 1; // somando o valor da variavel posicao com 1, e salvando o resultado da soma na propria variavel posicao
+                                            // portanto, eu estou atualizando o valor da minha variavel posicao
+
+                    if(posicao == midias.length){
+                        posicao = 0;
+                    }
+
+
+                    console.log(posicao);
+
+                    imagem.src = midias[posicao]; //atualizando o src da imagem com o endereco da nova posicao do vetor midias
+
+
+                }
+
+
+
+                let voltar = () =>{
+                    posicao = posicao - 1;
+
+                    if( posicao == -1){
+                        posicao = midias.length - 1;
+                    }
+
+                    imagem.src = midias[posicao];
+                }
+
+
+                let adicionarImagem = () =>{
+
+                    let input =  document.querySelector('input'); //salva a estrutura inteira da minha tag input, e armazena ela em uma variavel chamada input
+
+                    console.log(input.value); //input.value pega o valor que foi digitado no campo
+
+                    midias.push(input.value);
+
+                    console.log(midias);
+
+                }
+
+
+
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+
+        <p>Click the button to add elements to the array.</p>
+
+        <button onclick="myFunction()">Try it</button>
+
+        <p id="demo"></p>
+
+        <script>
+            let fruits = ['Banana', 'Orange', 'Apple', 'Mango'];
+            document.querySelector('#demo').innerHTML = fruits;
+
+            let myFunction = () => {
+
+            				//indice, quantos vou remover, quantos e quais serao inseridos 																	inseridos
+                fruits.splice(2, 1, 'Lemon', 'Kiwi');
+                document.querySelector('#demo').innerHTML = fruits;
+            }
+        </script>
+
+    </body>
+</html>
